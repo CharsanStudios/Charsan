@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<title>AmOR I LV U</title>
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KAYKY E PAULA</title>
+	<script>
+		function escolher() {
+			// Escolhendo aleatoriamente entre Sim e Não
+			let escolha = Math.random() < 0.5 ? "Sim" : "Não";
+
+			// Exibindo a escolha
+			let resultado = document.getElementById("resultado");
+			resultado.innerHTML = `A escolha foi ${escolha}.`;
+		}
+	</script>
+</head>
+<body>
+	<h1>O KAYKY E A PAULA SE AMAM?</h1>
+	<button onclick="escolher()">??????</button>
+	<p id="resultado"></p>
+</body>
+</html>
+

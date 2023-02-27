@@ -1,0 +1,14 @@
+button {
+	background-color: #4CAF50; /* verde */
+	color: rgb(0, 0, 0);
+	padding: 12px 24px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#resultado {
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 16px;
+}
