@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Charsan Studios - Contato</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+
+  body{
+    background-image: url(fundo1.avif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+  }
+  #ig{
+     position:fixed;
+      width: 28px;
+      height: 29px;
+      left: 1180px;
+      bottom: 685px;
+    }
+    #ig1{
+      position:fixed;
+      width: 28px;
+      height: 28px;
+      left: 1180px;
+      bottom: 720px;
+    }
+    #ig2{
+      position:fixed;
+      width: 28px;
+      height: 28px;
+      left: 1180px;
+      bottom: 755px;
+    }
+    #zap{
+      position:fixed;
+      width: 30px;
+      height: 30px;
+      left: 1180px;
+      bottom: 790px;
+    }
+    .ig{
+     position:fixed;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     left: 1123px;
+      bottom: 685px;
+      font-size:small;
+    }
+    .ig1{
+      position:fixed;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      left: 1113px;
+      bottom: 720px;
+      font-size:small;
+    }
+    .ig2{
+      position:fixed;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      left: 1115px;
+      bottom: 755px;
+      font-size:small;
+    }
+    .zap{
+      position:fixed;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      left: 1090px;
+      bottom: 790px;
+      font-size:small;
+    }
+    .pacman{
+     position: absolute;
+   width: 33px;
+   
+    }
+    .animation-container {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      overflow: hidden;
+      bottom: 520px;
+      left: 0px;
+    }
+    
+    .animation-container img{
+      position: absolute;
+      left: -100px;
+      animation: move 12s linear infinite;
+    }
+    
+    @keyframes move {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(100% - -1135px));
+      }
+    }
+    /* Estilos gerais */
+/* Estilos gerais */
+form { 
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  bottom: -500px;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+/* Estilos específicos para os campos de seleção */
+.select-container {
+  margin-bottom: 16px;
+}
+
+.select-container label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* Estilos específicos para o campo "Outro" */
+#outro-objetivo,
+#outro-como {
+  display: none;
+}
+
+#objetivo-outro:checked ~ #outro-objetivo,
+#como-outro:checked ~ #outro-como {
+  display: block;
+}
+
+/* Estilos para a mensagem de sucesso/erro */
+.form-message {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.form-message.success {
+  background-color: #28a745;
+}
+
+.form-message.error {
+  background-color: #dc3545;
+}
+
+
+</style>
+
+<body>
+  <div>
+  <form method="POST" action="enviar-contato.php">
+    <label for="nome-completo">Nome completo:</label>
+    <input type="text" name="nome-completo" id="nome-completo" required>
+    
+    <label for="email">Endereço de email:</label>
+    <input type="email" name="email" id="email" required>
+    
+    <label for="assunto">Assunto:</label>
+    <input type="text" name="assunto" id="assunto" required>
+    
+    <label for="mensagem">Mensagem:</label>
+    <textarea name="mensagem" id="mensagem" required></textarea>
+    
+    <label for="objetivo">Qual é o seu objetivo ao entrar em contato conosco?</label>
+    <select name="objetivo" id="objetivo">
+        <option value="pergunta">Pergunta sobre um produto/serviço</option>
+        <option value="problema">Reportar um problema técnico</option>
+        <option value="feedback">Fornecer feedback sobre nosso produto/serviço</option>
+        <option value="parceria">Propor uma parceria</option>
+        <option value="outro">Outro</option>
+    </select>
+    
+    <label for="outro-objetivo">Se você selecionou "outro", por favor, especifique:</label>
+    <input type="text" name="outro-objetivo" id="outro-objetivo">
+    
+    <label for="como-encontrou">Como você nos encontrou?</label>
+    <select name="como-encontrou" id="como-encontrou">
+        <option value="web">Pesquisa na web</option>
+        <option value="social">Mídia social</option>
+        <option value="recomendacao">Recomendação de um amigo</option>
+        <option value="outro">Outro</option>
+    </select>
+    
+    <label for="outro-como">Se você selecionou "outro", por favor, especifique:</label>
+    <input type="text" name="outro-como" id="outro-como">
+    
+    <label for="receber-atualizacoes">Gostaria de receber atualizações?</label>
+    <input type="checkbox" name="receber-atualizacoes" id="receber-atualizacoes" value="sim">
+    
+    <button type="submit">Enviar</button>
+</form>
+</div>
+
+ 
+  <header>
+    <img class="logo" src="logo.png" alt="logo">
+    <nav>
+      <ul>
+        
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos e Sites</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="entreemcnt.html">Contato</a></li>
+        <li><a href="ajudenos.html">Ajude nosso projeto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <h1 id="text">Bem-vindo a Charsan Studios</h1>
+      <p>Aqui é aonde fica nossas redes sociais para contato</p>
+      
+ 
+<div class="ig1">ARAUJO</div>
+<div class="ig">SANTO</div>
+<div class="ig2">CHAVES</div>
+<div class="zap">WHATSAPP</div>
+
+
+     <div class="animation-container">
+        <im class="pacman" src="Pacman-Vector-Free-PNG.png" alt="Imagem animada">
+      </div>
+     <a href="https://www.instagram.com/caio_samuel_oliveira/">
+      <img id="ig2" src="instagram.png" alt="insta">
+    </a>
+    <a href="https://www.instagram.com/wagnerreismourao/">
+      <img id="ig1" src="instagram.png" alt="insta">
+    </a>
+    <a href="https://www.instagram.com/jonata7julio/">
+      <img id="ig" src="instagram.png" alt="insta">
+    </a> 
+    <a href="https://api.whatsapp.com/send/?phone=5521989551321&text&type=phone_number&app_absent=0">
+      <img id="zap" src="whatsapp.png" alt="whatsapp">
+    </a>
+    </section>
+  </main>
+</body>
+</html>
