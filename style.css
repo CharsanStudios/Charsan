@@ -1,0 +1,372 @@
+/* Estilos globais */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos do cabeçalho */
+  header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: #000000;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0);
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    font-weight: 600;
+  }
+  
+  /* Estilos do herói */
+  .hero {
+    background-image: url(hero.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    position: absolute;
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 30px;
+    bottom: 700px;
+    box-shadow: #333;
+    
+  }
+  
+  .hero p {
+    position: absolute;
+    bottom: 670px;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: large;
+    
+  }
+  
+  .btn-primary {
+    position: absolute;
+    background-color: #ff9d00;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    bottom: 630px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ffbc3e;
+    cursor: pointer;
+  }
+  
+  /* Estilos das características */
+  .features {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .features ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .features li {
+    margin-right: 40px;
+    
+  }
+  
+  /* Estilos dos jogos */
+  .games {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .games h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .game-card {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    overflow: hidden;
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .game-card h3 {
+    font-size: 24px;
+    margin: 20px;
+  }
+  
+  .game-card p {
+    font-size: 16px;
+    margin: 20px;
+    text-align: left;
+  }
+  
+  .btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10
+  }
+  :root {
+    
+    --color-primary: #ff9d00;
+    --color-secondary: #000000;
+    --color-text: #ffffff;
+    --color-background: #ffffff;
+    --shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    --font-primary: 'Helvetica Neue', sans-serif;
+
+  }
+  
+  /* Exemplo de uso de variáveis */
+  header {
+    background-color: var(--color-background);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ffbc3e;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+/* Exemplo de uso de medidas responsivas */
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Responsividade para telas menores */
+  @media only screen and (max-width: 600px) {
+    .features li {
+      margin-right: 10px;
+    }
+    
+    .game-card {
+      margin: 10px;
+      width: calc(50% - 20px);
+    }
+    .ul{
+      font-size: xx-large;
+    }
+
+  }
+/* Layout com CSS Grid */
+.features ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+  }
+  
+  .games {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+/* Animações e transições */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ffbc3e;
+    cursor: pointer;
+  }
+  
+  .game-card{
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    overflow: hidden;  }  
+    
+    #teste{
+        position: static;
+        bottom: 500px;
+        padding: 70px;
+        left: 5px;
+    }
+    .logo{
+      position: fixed;
+      width: 45px;
+      height: 45px;
+      left: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    label, input, textarea {
+      margin: 10px 0;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    #text{
+      font-size: x-large;
+    }
+    .pacman{
+     position: absolute;
+   width: 33px;
+   
+    }
+    .animation-container {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      overflow: hidden;
+      bottom: 520px;
+      left: 0px;
+    }
+    
+    .animation-container img {
+      position: absolute;
+      left: -100px;
+    
+      animation: move 12s linear infinite;
+    }
+    
+    @keyframes move {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(100% - -1200px));
+      }
+    }
+    
+    #fundo{
+      position: absolute;
+      width: 1270px;
+      height: 1530px;
+      opacity: 0.3;
+    }
+    #clock {
+      font-size: xx-large;
+      font-weight: bold;
+      text-align: center;
+    }
+    a:hover {
+			border-bottom: 2px solid #d3d3d3;}
