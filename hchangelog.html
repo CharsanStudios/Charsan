@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeLog do Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .logo{
+        width: 65px;
+        height: 60px;
+
+    }
+    body{
+        background-color: orange;
+        
+      
+    }
+   
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav li a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+  background-color: #fff;
+  color: #FFA500;
+}
+
+nav .form {
+  display: flex;
+  align-items: center;
+}
+
+nav label {
+  margin-right: 10px;
+  color: #000000;
+}
+ /* Estilo para o livro */
+body {
+ 
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding:20px;
+}
+
+.book {
+  width: 800px;
+  height: 600px;
+  margin: 50px auto;
+  border: 1px solid orange;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #d9c4b1;
+  overflow: hidden;
+  position: relative;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.page:first-child {
+  background-color: #f9f6f2;
+}
+
+.page:last-child {
+  background-color: #fdf6e3;
+}
+
+/* Estilo para o texto */
+h1, h2, p {
+  margin: 0;
+  padding: 20px;
+  text-align: justify;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  color: orange;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: orange;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Estilo para a capa */
+.cover {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366');
+  background-size: cover;
+  background-position: center;
+}
+
+.cover-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cover-text h1 {
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.cover-text p {
+  font-size: 40px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+
+<body>
+    
+  <header>
+    <img class="logo" src="logo.png" alt="logo">
+    <nav>
+      <ul>
+        
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos e Sites</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="entreemcnt.html">Contato</a></li>
+        <li><a href="ajudenos.html">Ajude nosso projeto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="book">
+    <div class="page">
+      <h1>Meu Livro</h1>
+      <p>No ChangeLog 2 não tem nada, não adiantar clicar</p>
+      <button onclick="mostrarCapitulo(1)">ChangeLog 1</button>
+      <button onclick="mostrarCapitulo(2)">ChangeLog 2</button>
+    </div>
+    <div class="page" id="capitulo1">
+      <h2>ChangeLog 1:</h2>
+      <p>Changelogs
+        <br><br>
+        Jogos de Sites
+      </p>
+      <button onclick="mostrarCapitulo(0)">Voltar ao início</button>
+      <button onclick="mostrarCapitulo(2)">Próximo ChangeLog</button>
+    </div>
+    <div class="page" id="capitulo2">
+      <h2>ChangeLog 2</h2>
+      <p>Este é o segundo capítulo do meu livro.</p>
+      <button onclick="mostrarCapitulo(0)">Voltar ao início</button>
+      <button onclick="mostrarCapitulo(1)">ChangeLog anterior</button>
+    </div>
+  </div>
+</body>
+<script>
+    // Função que mostra o capítulo correspondente e esconde os outros
+    function mostrarCapitulo(numeroCapitulo) {
+      var paginas = document.querySelectorAll('.page');
+      for (var i = 0; i < paginas.length; i++) {
+        paginas[i].style.display = 'none';
+      }
+      paginas[numeroCapitulo].style.display = 'block';
+    }
+    // Mostra o primeiro capítulo por padrão
+    mostrarCapitulo(0);
+  </script>
+</html>

@@ -34,14 +34,11 @@
         bottom: 680px;
         
     }
-    
-		body {
+    body {
 			
-      background-image: url(fundo1.avif);
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-}@media (max-width: 600px) {
+      background-color:#ff9d00;
+}
+		@media (max-width: 600px) {
   .hero {
     padding: 5%;
   }
@@ -74,9 +71,9 @@ li{
 	
 }
 body {
-      background-image: url(fundo1.avif);
-			background-size: cover;  
-		}
+			
+      background-color:#ff9d00;
+}
     .hero p{
       bottom: 390px;
       font-size: large;
@@ -98,6 +95,52 @@ body {
     bottom: -100px;
   }
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav li a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+  background-color: #fff;
+  color: #FFA500;
+}
+
+nav .form {
+  display: flex;
+  align-items: center;
+}
+
+nav label {
+  margin-right: 10px;
+  color: #000000;
+}
+#tuto{
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:white ;
+  
+}
+a :hover {
+  
+  color :#FFA500;
+  background-color: rgb(78, 78, 78);
+}
+.logo{
+  width: 75px;
+  height: 70px;
+}
 </style>
 <body>
   
@@ -111,6 +154,7 @@ body {
         <li><a href="sobre.html">Sobre Nós</a></li>
         <li><a href="entreemcnt.html">Contato</a></li>
         <li><a href="ajudenos.html">Ajude nosso projeto</a></li>
+        <li><a href="tutoriais.html">Tutoriais</a></li>
       </ul>
     </nav>
   </header>
@@ -120,9 +164,6 @@ body {
       <p id="p11">aqui fica nossos jogos e sites</p>
       
 
-      <div class="animation-container">
-        <img class="pacman" src="Pacman-Vector-Free-PNG.png" alt="Imagem animada">
-      </div>
       
 
     </section>
@@ -133,6 +174,10 @@ body {
   <p id="p10">e muito dificil ficar fazendo jogos sem pc e celular bons
     <br>espero que nos compreendam
   </p>
-  
+  <a href="adivinhe.html">
+<p>Adivinhe Jogo</p></a>
+<a href="jgdavelhalocal.html">
+  <p>Jogo da Velha 2 Players</p></a>
+ 
 </body>
 </html>

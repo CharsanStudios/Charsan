@@ -7,23 +7,44 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="index.js">
   <link rel="stylesheet" href="tempo.py">
+ 
 </head>
-<body>
+<script>const label = document.querySelector('nav .form label');
+  const formContainer = document.querySelector('nav .form');
+  const form = document.querySelector('nav .form form');
   
+  label.addEventListener('click', function() {
+    formContainer.classList.toggle('active');
+    form.classList.toggle('active');
+  });
+  
+</script>
+<body>
   <header>
-   <img class="logo" src="logo.png" alt="logo">
+    <img class="logo" src="logo.png" alt="logo">
     <nav>
       <ul>
-        
         <li><a href="index.html">Início</a></li>
         <li><a href="jogos.html">Jogos e Sites</a></li>
         <li><a href="sobre.html">Sobre Nós</a></li>
         <li><a href="entreemcnt.html">Contato</a></li>
-		<li><a href="ajudenos.html">Ajude nosso projeto</a></li>
-        
+        <li><a href="ajudenos.html">Ajude nosso projeto</a></li>
+        <li><a href="hchangelog.html"> ChangeLog </a></li>
       </ul>
+    
+        </form>
+      </div>
     </nav>
+    
+    
+    <div id="saudacao"></div>
   </header>
+
+  <scrpt>
+    let nome = prompt("Qual é o seu nome?");
+    let saudacao = document.getElementById("saudacao");
+    saudacao.innerText = "Oi " + nome;
+  </script>
   
   <main>
     <section class="hero">
@@ -31,22 +52,232 @@
       <p id="p0">Nós criamos jogos incríveis que você vai amar.</p>
       <a href="jogos.html"class="btn-primary">Veja nossos jogos apertando aqui</a>
 
-      <div class="animation-container">
-        <img class="pacman" src="Pacman-Vector-Free-PNG.png" alt="Imagem animada">
-      </div>
+     
       <div id="clock"></div>
 
 
     </section>
   </main>
   <style>
-	
+   
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav li a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+  background-color: #fff;
+  color: #FFA500;
+}
+
+nav .form {
+  display: flex;
+  align-items: center;
+}
+
+nav label {
+  margin-right: 10px;
+  color: #000000;
+}
+
+nav input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+nav button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  color: #FFA500;
+  cursor: pointer;
+}
+
+animation-container {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      overflow: hidden;
+      bottom: 520px;
+      left: 0px;
+    }
+
+
+     #saudacao {
+        position: absolute;
+        top: 0;
+        left: 1000px;
+        padding-top: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;
+      }
+    nav input{
+      width: 100px;
+      height: 30px;
+
+width: 70px;
+height: 30px;
+}
+nav button{
+
+  width: 70px;
+  height: 30px;
+  left: 800px;
+}
+    nav label{
+      position: fixed;
+      left: 1150px;
+    }
+    nav form {
+  width: 200px;
+  font-size: 14px;
+}
+d
+    form {
+  background-color: #FFA500;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #FFFFFF;
+  color: #FFA500;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.message {
+  background-color: #FFA500;
+  padding: 20px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+    nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#formulario {
+  display: flex;
+  align-items: center;
+}
+
+#mensagem {
+  display: block;
+  text-align: right;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+	nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+nav li {
+  margin-left: 20px;
+ 
+  
+}
+
+nav .form {
+  position: relative;
+}
+
+nav .form:hover form {
+  display: block;
+}
+
+nav form {
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  display: none;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+nav form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+nav form input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+nav form button {
+  display: block;
+  background-color: #008080;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+nav #mensagem {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
 		body {
 			
-            background-image: url(fundo1.avif);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
+          background-color:#ff9d00;
 		}
 
 		#h, #h3 {
@@ -74,7 +305,9 @@
     
 			margin: 0 0 24px;
 			font-size: 20px;
-      bottom: -370px;}
+      bottom: -370px;
+    left: 10px;
+    }
 	#p {
       
 			margin: 0 0 24px;
@@ -87,13 +320,10 @@
 			transition: border-bottom 0.2s ease-in-out;}
  #h2{
 	font-weight: bold;
-			margin: 0 0 16px; text-transform: uppercase; letter-spacing: 1px; color: red;}
-			body {
-  background-image: url(fundo1.avif);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+			margin: 0 0 16px; text-transform: uppercase; letter-spacing: 1px; color: red;
+      left: 10px;
+ }
+		
 
 .hero {
   padding: 10%;
@@ -101,29 +331,12 @@
 }
 .logo{
       position: fixed;
-      width: 45px;
-      height: 45px;
+      width: 75px;
+      height: 70px;
       left: 20px;
     }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-nav ul {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  
-}
-
-nav li {
-  margin-left: 20px;
-}
 
 @media (max-width: 600px)
 
@@ -159,10 +372,7 @@ li{
   height: 15px;
 	
 }
-body {
-      background-image: url(fundo1.avif);
-			background-size: cover;  
-		}
+
     .hero p{
       bottom: 390px;
       font-size: large;
@@ -186,20 +396,94 @@ body {
   #h4{
     position: absolue;
     bottom: 90px;}
+  
 
   #p0{
     bottom: 380px;
     font-size: medium;
   }
+ 
+}
+
+#p2{
+  position: relative;
+  font-size: 20px;
+  left: 20px;
+  bottom: 1200px;
   
+}
+#h2{
+  
+  position: absolute;
+  bottom: -110px;
+  left: 20px;
+  
+}
+#p3{
+  position: absolute;
+  left: 20px;
+  bottom: -60px;
+}
+#h4{
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+}
+@media (max-width: 1365px) 
+
+{
+#text{
+  bottom: 500px;
+}
+
+#p2{
+  bottom: 120px;
+}
+#saudacao{
+  left: 1000px;
+  color: rgb(0, 47, 255);
+}
 
 }
-	
+/*notebook*/
+@media (max-width: 1366px) 
+{
+
+#saudacao{
+  left: 1000px;
+  color: rgb(255, 0, 0);
+}
+#h4{
+  bottom: 300px;
+}
+#p3{
+  bottom: 250px;
+  
+}
+#h2{
+  bottom: 200px;
+
+}
+#p2{
+  bottom :27+0px;
+}
+#text{
+  bottom:600px;
+}
+.btn-primary{
+  bottom: 590px;
+}
+}
+
 	</style>
-	<h1 id="h4">JOGOS ESTÃO SENDO <br> CRIADOS AGUARDEM...</h1>
+	<h1 id="h4">JOGOS ESTÃO SENDO <br> CRIADOS, AGUARDEM...</h1>
 	<p id="p3">estamos produzindo nossos jogos então peço paciência <br> conosco, estamos pensando em jogos que vocês possam gostar </p>
 	<h2 id="h2">Aviso:</h1>
 	<p id="p2">ainda não temos Computadores Bons suficientes para criar jogos bons <br>estamos providenciando isso, mas isso pode demorar bastante <br>e também estamos aprendendo a fazer jogos e os sites</p>
+ 
+
+ 
+</script>
 </body>
 </html>
 

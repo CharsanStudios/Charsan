@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Primeiro HTML</title>
+    <script>
+     function exibirMensagem() {
+  const nome = document.getElementById('nome').value.trim();
+  if (nome !== '') {
+    const mensagem = `Olá ${nome}!`;
+    document.getElementById('mensagem').textContent = mensagem;
+    document.getElementById('formulario').style.display = 'none';
+
+    const botoes = document.getElementsByClassName('botao');
+    for (let i = 0; i < botoes.length; i++) {
+      botoes[i].style.display = 'none';
+    }
+
+    document.getElementById('mensagem').style.display = 'block'; // Adicionando esta linha
+  }
+}
+
+    </script>
+  </head>
+  <style> 
+  body {
+   
+    font-family: Arial, sans-serif;
+  }
+  
+  #formulario {
+    margin: 50px auto;
+    padding: 20px;
+   
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  #formulario label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  #formulario input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #formulario button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #mensagem {
+    margin: 50px auto;
+    padding: 20px;
+    
+    background: local;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+    
+  }
+  </style>
+  <body>
+    <div id="formulario">
+      <label for="nome">Digite seu nome:</label>
+      <input type="text" id="nome" name="nome" onnput="exibirMensagem()">
+      <button type="button" class="botao" onclick="exibirMensagem()">Enviar</button>
+    </div>
+    <p id="mensagem"></p>
+  </body>
+</html>

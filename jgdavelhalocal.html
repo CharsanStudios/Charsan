@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Jogo da Velha</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+body {
+	font-family: Arial, sans-serif;
+    background-color:#ff9d00 ;
+    padding: 30px;
+}
+
+h1 {
+	text-align: center;
+}
+
+#board {
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	border: 1px solid black;
+}
+
+.square {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	cursor: pointer;
+	background-color: #555;
+}
+
+.square:hover {
+	background-color: #666;
+}
+
+.square.marked {
+	background-color: #777;
+	cursor: default;
+}
+
+#reset-button {
+    position: fixed;
+	margin-top: 20px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #4CAF50;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+    left: 570px;
+    bottom: 370px;
+}
+
+#reset-button:hover {
+	background-color: #3e8e41;
+}
+
+#message {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+}
+</style>
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="logo">
+        <nav>
+          <ul>
+            
+            <li><a href="index.html">Início</a></li>
+            <li><a href="jogos.html">Jogos e Sites</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="entreemcnt.html">Contato</a></li>
+            <li><a href="ajudenos.html">Ajude nosso projeto</a></li>
+          </ul>
+        </nav>
+      </header>
+	<h1>Jogo da Velha</h1>
+	<div id="board">
+		<div class="square" data-row="0" data-col="0"></div>
+		<div class="square" data-row="0" data-col="1"></div>
+		<div class="square" data-row="0" data-col="2"></div>
+		<div class="square" data-row="1" data-col="0"></div>
+		<div class="square" data-row="1" data-col="1"></div>
+		<div class="square" data-row="1" data-col="2"></div>
+		<div class="square" data-row="2" data-col="0"></div>
+		<div class="square" data-row="2" data-col="1"></div>
+		<div class="square" data-row="2" data-col="2"></div>
+	</div>
+	<button id="reset-button">Reiniciar</button>
+	<div id="message"></div>
+	<script>const squares = document.querySelectorAll('.square');
+        const message = document.getElementById('message');
+        const resetButton = document.getElementById('reset-button');
+        let currentPlayer = 'x';
+        let gameEnded = false;
+        const winningCombos = [
+          [0, 1, 2], [3, 4, 5], [6, 7, 8], // horizontal
+          [0, 3, 6], [1, 4, 7], [2, 5, 8], // vertical
+          [0, 4, 8], [2, 4, 6] // diagonal
+        ];
+        
+        // loop through all squares and add event listener for clicks
+        for (let i = 0; i < squares.length; i++) {
+          squares[i].addEventListener('click', function() {
+            // check if the square is already marked or if the game has ended
+            if (this.classList.contains('marked') || gameEnded) return;
+            // mark the square with current player's mark (X or O)
+            this.classList.add('marked');
+            this.innerHTML = currentPlayer.toUpperCase();
+            // check if the current player has won
+            if (checkWin(currentPlayer)) {
+              message.innerHTML = `${currentPlayer.toUpperCase()} venceu!`;
+              gameEnded = true;
+              return;
+            }
+            // check if the game is a tie
+            if (checkTie()) {
+              message.innerHTML = 'Empate!';
+              gameEnded = true;
+              return;
+            }
+            // switch to the other player
+            currentPlayer = currentPlayer === 'x' ? 'o' : 'x';
+            message.innerHTML = `Vez do jogador ${currentPlayer.toUpperCase()}`;
+          });
+        }
+        
+        // add event listener for reset button click
+        resetButton.addEventListener('click', function() {
+          // remove all marks from squares
+          for (let i = 0; i < squares.length; i++) {
+            squares[i].classList.remove('marked');
+            squares[i].innerHTML = '';
+          }
+          // reset game variables
+          currentPlayer = 'x';
+          gameEnded = false;
+          message.innerHTML = `Vez do jogador ${currentPlayer.toUpperCase()}`;
+        });
+        
+        // check if the current player has won
+        function checkWin(player) {
+          for (let i = 0; i < winningCombos.length; i++) {
+            let combo = winningCombos[i];
+            if (squares[combo[0]].innerHTML === player.toUpperCase()
+                && squares[combo[1]].innerHTML === player.toUpperCase()
+                && squares[combo[2]].innerHTML === player.toUpperCase()) {
+              // highlight the winning combo
+              squares[combo[0]].classList.add('winning');
+              squares[combo[1]].classList.add('winning');
+              squares[combo[2]].classList.add('winning');
+              return true;
+            }
+          }
+          return false;
+        }
+        
+        // check if the game is a tie
+        function checkTie() {
+          for (let i = 0; i < squares.length; i++) {
+            if (!squares[i].classList.contains('marked')) {
+              return false;
+            }
+          }
+          return true;
+        }
+        </script>
+</body>
+</html>

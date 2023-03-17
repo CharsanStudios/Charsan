@@ -20,15 +20,7 @@ body {
   }
   
   /* Estilos do cabeçalho */
-  header {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-  }
+  
   
   nav {
     max-width: 960px;
@@ -52,7 +44,7 @@ body {
   
   /* Estilos do herói */
   .hero {
-    background-image: url(hero.jpg);
+    
     background-size: cover;
     background-position: center;
     min-height: 500px;
@@ -172,7 +164,7 @@ body {
   }
   :root {
     
-    --color-primary: #ff9d00;
+    --color-primary: #f59802;
     --color-secondary: #000000;
     --color-text: #ffffff;
     --color-background: #ffffff;
@@ -288,7 +280,7 @@ body {
     .logo{
       position: fixed;
       width: 45px;
-      height: 45px;
+      height: 40px;
       left: 20px;
     }
     form {
@@ -327,35 +319,7 @@ body {
     #text{
       font-size: x-large;
     }
-    .pacman{
-     position: absolute;
-   width: 33px;
-   
-    }
-    .animation-container {
-      width: 100%;
-      height: 300px;
-      position: absolute;
-      overflow: hidden;
-      bottom: 520px;
-      left: 0px;
-    }
     
-    .animation-container img {
-      position: absolute;
-      left: -100px;
-    
-      animation: move 12s linear infinite;
-    }
-    
-    @keyframes move {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(100% - -1200px));
-      }
-    }
     
     #fundo{
       position: absolute;
