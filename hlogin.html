@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="website icon" type="png" href="logosembg.png">
+</head>
+<style>
+    body {
+      background-image:url(back.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.div-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-total {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-login {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.div-card-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eeeeeeea;
+  box-shadow: 0px 0px 8px #251800;
+  padding: 30px 35px;
+  border-radius: 15px;
+  margin-top: 150px;
+}
+
+.div-login input {
+  outline: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: #00000018;
+}
+
+.div-login input:hover {
+  background-color: #00000044;
+}
+
+.div-login label {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+.bu22tton {
+  background-color: #00000018;
+  border: none;
+  padding: 20px 80px;
+  margin-top: 25px;
+  border-radius: 25px;
+  left: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bu22tton:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.div-card-login h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #000000;
+  font-weight: 1000;
+  margin: 0;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.div-login input::placeholder {
+  color: #000000;
+}
+
+.div-login input:hover::placeholder {
+  color: #ffffff;
+}
+
+.div-register {
+  cursor: pointer;
+  font-weight: 550;
+  text-transform: lowercase;
+}
+
+.div-register:hover {
+  color: #4e39179a;
+}
+
+.p1 {
+  text-decoration: none;
+}
+
+.linenone {
+  text-decoration: none;
+  color: black;
+}
+
+</style>
+<body>
+    <h1>Faça login para continuar na página</h1>
+    <div class="div-total">
+        <div class="div-card-login">
+            <div class="h1">
+                <h1>Login</h1>
+                <div class="div-login">
+                    <label id="label-login" for="usuario">Usuário:</label>
+                    <input type="text" id="input-login" placeholder="Usuário">
+                </div>
+                <div class="div-login">
+                    <label for="password">Senha:</label>
+                    <input type="password" placeholder="Senha">
+                </div>
+                <div>
+                    <button class="bu22tton">Login</button>
+                </div>
+                <a href="hcriarconta.html" class="linenone">
+                    <div class="div-register">
+                        <p class="p1">Criar conta</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>// obtém as referências dos elementos do formulário
+    const form = document.querySelector('.div-login');
+    const usernameInput = document.querySelector('#input-login');
+    const passwordInput = document.querySelector('#password');
+    
+    // adiciona um ouvinte de eventos para o formulário ser enviado
+    form.addEventListener('submit', (event) => {
+      // impede que o formulário seja enviado
+      event.preventDefault();
+    
+      // obtém os valores de entrada do usuário
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value.trim();
+    
+      // verifica se o nome de usuário e a senha são válidos
+      if (username === '' || password === '') {
+        alert('Por favor, preencha todos os campos!');
+      } else if (username !== 'usuario' || password !== 'senha') {
+        alert('Nome de usuário ou senha incorretos. Por favor, tente novamente.');
+      } else {
+        alert('Login bem sucedido!');
+        form.reset();
+      }
+    });
+    
+    </script>
+</html>

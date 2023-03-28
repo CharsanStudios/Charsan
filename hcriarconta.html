@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CharsanStudios - Criar Conta</title>
+    <link rel="website icon" type="png" href="logosembg.png">
+</head>
+<!--PALETA DE CORES:  
+    orange-card-login:#e68e004b;
+    orange-fundo:#ff9d00;
+    orange-box-shadow:#251800;
+    orange-button/hover:#ffe4b5;
+    orange-h1:#;
+-->
+<style>
+    body{
+        background-image:url(back.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+        margin:0;
+    }
+    h1{
+        color: white;
+      display:flex ;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Pacifico', cursive;
+    }
+    .div-text{
+       display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-total{
+        width: 100vw;
+        height: 50vh;
+       display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-login{
+        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .div-card-login{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       background-color:#eeeeeeea;
+       box-shadow: 0px 0px 8px #251800;
+       padding: 30px 35px; 
+       border-radius:15px ;
+       margin-top: 150px;
+    }
+    .div-login input{
+        outline: none;
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        background-color: #00000018;
+    }
+    .div-login input:hover{
+        background-color: #00000044;
+    }
+    .div-login label{
+        color: rgb(0, 0, 0);
+        padding: 10px;
+    }
+    .bu22tton{
+        background-color: #00000018  ;
+        border: none;
+        padding: 20px 80px;
+        margin-top: 25px;
+        border-radius:25px;
+        left: 20px;
+        text-transform: uppercase;
+        color: #000000;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .bu22tton:hover{
+        background-color: #000000;
+        color :#ffffff;
+    }
+    .div-card-login h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #000000;
+        font-weight: 1000;
+        margin: 0;  
+        font-family: 'Edu NSW ACT Foundation', cursive;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        
+        }
+        .div-login input::placeholder{
+        color: #000000;
+    }
+    .div-login input:hover::placeholder{
+        color: #ffffff;
+    }
+    .div-register{
+        cursor: pointer;
+        font-weight: 550;
+        text-transform: lowercase;
+    }
+    .div-register:hover{
+       color: #4e39179a
+    }
+    .p1{
+        text-decoration:none;
+    }
+    .linenone{
+        text-decoration: none;
+        color:black;
+    }
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+</style>
+<body>
+    <h1>crie sua conta aqui</h1>
+    <div class="div-total">
+<div class="div-card-login">
+    <div class="h1">
+        <h1>criar conta</h1>
+    </div>
+<div class="div-login">
+<label for="usuario">Usuário:</label>
+<input type="text" placeholder="Usuário">
+</div>
+<div class="div-login">
+    <label for="password">Senha:</label>
+    <input type="password" placeholder="Senha">
+</div>
+<div class="div-login">
+    <label for="password"> Confirmar Senha:</label>
+    <input type="password" placeholder="Senha">
+</div>
+<div class="div-login">
+    <label for="email">Email</label>
+    <input type="email" placeholder="Email">
+</div>
+<div>
+    <button class="bu22tton">Criar conta</button>
+</div>
+<a class="linenone" href="hlogin.html">
+<div class="div-register"><p class="p1">Entrar com conta já criada </p></div>
+</a>
+</div>
+    </div>
+</body>
+<script>const form = document.querySelector('form');
+    const usuario = document.querySelector('input[name="usuario"]');
+    const senha = document.querySelector('input[name="senha"]');
+    const confirmarSenha = document.querySelector('input[name="confirmarSenha"]');
+    const email = document.querySelector('input[name="email"]');
+    
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (senha.value === confirmarSenha.value) {
+        const usuarioValue = usuario.value;
+        const senhaValue = senha.value;
+        const emailValue = email.value;
+        // Aqui você pode fazer uma requisição AJAX para enviar os dados para um servidor, por exemplo:
+        // fetch('/criar-conta', {
+        //   method: 'POST',
+        //   body: JSON.stringify({ usuario: usuarioValue, senha: senhaValue, email: emailValue }),
+        //   headers: {
+        //     'Content-Type': 'application/json'
+        //   }
+        // })
+        // .then(response => response.json())
+        // .then(data => console.log(data))
+        console.log(`Usuário: ${usuarioValue}, Senha: ${senhaValue}, Email: ${emailValue}`);
+      } else {
+        alert('As senhas não correspondem.');
+      }
+    });
+    </script>
+</html>

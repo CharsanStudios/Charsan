@@ -1,101 +1,158 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Jogo de Adivinhação</title>
-</head>
-<style>
-    .resultado-animado {
-  animation-name: animacao-resultado;
-  animation-duration: 1s;
-}
+  <head>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinhação Complexo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" type="png" href="logosembg.png">
+    <style>
+     body {
+     
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        padding: 40px;
+      }
 
-@keyframes animacao-resultado {
-  from { opacity: 0; transform: translateY(-50px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+      h1 {
+        color: #ffffff;
+        font-size: 48px;
+        text-shadow: 2px 2px #333333;
+      }
 
-/* Botão laranja com borda branca */
-button {
-  background-color: #ffffff; /* laranja */
-  color:#f26722; /* branco */
-  border: 2px solid #f26722; /* branco */
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-}
+      p {
+        color: #333333;
+        font-size: 24px;
+        line-height: 1.5;
+      }
 
-/* H1 laranja com fundo branco */
-h1 {
-  background-color: #fff; /* branco */
-  color: #f26722; /* laranja */
-  padding: 20px;
-  font-size: 24px;
-  text-align: center;
-  border: 2px solid #f26722; /* laranja */
-  border-radius: 5px;
-}
+      input[type="text"] {
+        border: none;
+        border-radius: 8px;
+        font-size: 24px;
+        padding: 16px 24px;
+        margin-right: 8px;
+      }
 
-nav{
+      button {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        color: #f7b733;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 16px 32px;
+        text-shadow: 1px 1px #ffffff;
+        margin: 5px;
+      }
 
-  background-size: 100%;
-  background-color: #fff;
-
+      button:hover {
+        background-color: #f7b733;
+        color: #ffffff;
+        text-shadow: 1px 1px #333333;
+      }
+      header{
+        background-color: #fff;
+        background-size: 100%;
+      }
+      nav{
+background-size: 100%;
+background-color: #fff;
+margin-bottom: 10px;
 }
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+list-style: none;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
 }
-
 nav li a {
-  display: block;
-  padding: 10px 150px;
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
+display: block;
+padding: 10px 150px;
+color: #000000;
+text-decoration: none;
+text-transform: uppercase;
+transition: background-color 0.3s ease;
 }
-
 nav li a:hover {
-  background-color: #fff;
-  color: #FFA500;
+background-color: #fff;
+color: #FFA500;
 }
-
-nav .form {
-  display: flex;
-  align-items: center;
+.logo{
+  width: 70px;
+  height: 70px;
 }
-
-nav label {
-  margin-right: 10px;
-  color: #000000;
-}
-
-body {
-			
-      background-color:#ff9d00;
-}
-</style>
-<body>
-  <nav>
-    <ul>
-      
-      <li><a href="index.html">Início</a></li>
-      <li><a href="jogos.html">Jogos e Sites</a></li>
     
- 
-    </ul>
-  </nav>
-    <p id="resultado" class="resultado-animado"></p>
+body {
+    background-image:url(back.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 
-    <h1>Jogo de Adivinhação</h1>
-    <p>Estou pensando em um número entre 1 e 100. Tente adivinhar!</p>
-    <input type="text" id="palpite">
-    <button onclick="adivinhar()">Adivinhar</button>
-    <p id="resultado"></p>
-    <script src="jogo.js"></script>
-    <link rel="stylesheet" href="style.css">
-</body>
+    </style>
+    <script>
+      var min = 1;
+      var max = 1000;
+      var numGuesses = 0;
+      var secretNumber;
+
+      function generateSecretNumber() {
+        secretNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        alert("Tente adivinhar o número secreto entre " + min + " e " + max + ".");
+      }
+
+      function makeGuess() {
+        var guess = parseInt(document.getElementById("guess").value);
+        if (isNaN(guess) || guess < min || guess > max) {
+          alert("Digite um número válido.");
+          document.getElementById("guess").value = "";
+        } else {
+          numGuesses++;
+          var remainingGuesses = 10 - numGuesses;
+          document.getElementById("remaining").innerHTML = remainingGuesses;
+          if (guess === secretNumber) {
+            alert("Parabéns! Você acertou em " + numGuesses + " tentativas.");
+            disableInput();
+          } else if (guess < secretNumber) {
+            alert("Tente um número maior.");
+          } else if (guess > secretNumber) {
+            alert("Tente um número menor.");
+          }
+          if (numGuesses === 10) {
+            alert("Acabaram suas tentativas! O número era " + secretNumber + ".");
+            disableInput();
+          }
+          document.getElementById("guess").value = "";
+        }
+      }
+
+      function disableInput() {
+        document.getElementById("guess").disabled = true;
+        document.getElementById("submit").disabled = true;
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="logosembg.png" alt="logo">
+      <nav>
+        <ul>
+          
+          <li><a href="index.html">Início</a></li>
+          <li><a href="jogos.html">Jogos e Sites</a></li>
+         
+        </ul>
+      </nav>
+    </header>
+    <h1>Jogo de Adivinhação Complexo</h1>
+    <button onclick="generateSecretNumber()">Começar</button>
+    <br><br>
+    <p>Tentativas Restantes: <span id="remaining">10</span></p>
+    <br>
+    <input type="text" id="guess" placeholder="Digite um número">
+    <button id="submit" onclick="makeGuess()">Enviar</button>
+  </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinhação Avançada</title>
+    <script>
+      var min = 1;
+      var max = 100;
+      var guesses = [];
+      
+      function makeGuess() {
+        var guess = Math.floor((min + max) / 2);
+        guesses.push(guess);
+        var feedback = prompt("O número que você pensou é " + guess + "? Responda com 'maior', 'menor' ou 'igual'");
+        if (feedback === "igual") {
+          alert("Acertei em " + guesses.length + " tentativas!");
+        } else if (feedback === "maior") {
+          min = guess + 1;
+          makeGuess();
+        } else if (feedback === "menor") {
+          max = guess - 1;
+          makeGuess();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Jogo de Adivinhação Avançada</h1>
+    <p>Pense em um número de 1 a 100 e deixe-me adivinhar qual é.</p>
+    <button onclick="makeGuess()">Começar</button>
+  </body>
+</html>

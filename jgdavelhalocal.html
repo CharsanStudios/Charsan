@@ -4,17 +4,55 @@
 	<meta charset="UTF-8">
 	<title>Jogo da Velha</title>
 	<link rel="stylesheet" href="style.css">
+  <link rel="website icon" type="png" href="logosembg.png">
 </head>
 <style>
+  nav{
+
+background-size: 100%;
+background-color: #fff;
+margin-bottom: 10px;
+
+
+}
+nav ul {
+list-style: none;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+nav li a {
+display: block;
+padding: 10px 150px;
+color: #000000;
+text-decoration: none;
+text-transform: uppercase;
+transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+background-color: #fff;
+color: #FFA500;
+}
+
+
+
+
     
 body {
 	font-family: Arial, sans-serif;
-    background-color:#ff9d00 ;
+  background-image:url(back.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     padding: 30px;
 }
 
 h1 {
 	text-align: center;
+  margin-top: 50px;
 }
 
 #board {
@@ -56,7 +94,7 @@ h1 {
 	font-size: 16px;
 	cursor: pointer;
     left: 570px;
-    bottom: 370px;
+    bottom: 340px;
 }
 
 #reset-button:hover {
@@ -70,6 +108,10 @@ h1 {
 	font-weight: bold;
 	color: red;
 }
+.logo{
+  width: 70px;
+  height: 65px;
+}
 </style>
 <body>
     <header>
@@ -79,9 +121,7 @@ h1 {
             
             <li><a href="index.html">Início</a></li>
             <li><a href="jogos.html">Jogos e Sites</a></li>
-            <li><a href="sobre.html">Sobre Nós</a></li>
-            <li><a href="entreemcnt.html">Contato</a></li>
-            <li><a href="ajudenos.html">Ajude nosso projeto</a></li>
+           
           </ul>
         </nav>
       </header>

@@ -80,7 +80,7 @@ body {
   
   .btn-primary {
     position: absolute;
-    background-color: #ff9d00;
+    
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 4px;
@@ -185,7 +185,7 @@ body {
   }
   
   .btn-primary {
-    background-color: var(--color-primary);
+    
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 4px;
@@ -193,7 +193,7 @@ body {
   }
   
   .btn-primary:hover {
-    background-color: #ffbc3e;
+    background-color: #ffbb3e9a;
     cursor: pointer;
   }
   
@@ -248,7 +248,7 @@ body {
   }
 /* Animações e transições */
 .btn-primary {
-    background-color: var(--color-primary);
+    
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 4px;
@@ -279,9 +279,7 @@ body {
     }
     .logo{
       position: fixed;
-      width: 45px;
-      height: 40px;
-      left: 20px;
+   
     }
     form {
       max-width: 500px;
