@@ -8,186 +8,50 @@
 </head>
 
 <style>
-
-body {
-  background-image:url(back.jpg) ;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-  #ig{
-     position:fixed;
+#ig{
+    
       width: 28px;
       height: 29px;
       left: 1180px;
-      bottom: 675px;
-    }
+      bottom: 675px;}
     #ig1{
-      position:fixed;
+      
       width: 28px;
       height: 28px;
       left: 1180px;
       bottom: 710px;
     }
     #ig2{
-      position:fixed;
+      
       width: 28px;
       height: 28px;
       left: 1180px;
       bottom: 745px;
     }
     #zap{
-      position:fixed;
+      
       width: 30px;
       height: 30px;
       left: 1180px;
       bottom: 780px;
     }
-    .ig{
-     position:fixed;
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     left: 1123px;
-      bottom: 675px;
-      font-size:small;
-      
-    }
-    .ig1{
-      position:fixed;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      left: 1113px;
-      bottom: 710px;
-      font-size:small;
-    }
-    .ig2{
-      position:fixed;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      left: 1115px;
-      bottom: 745px;
-      font-size:small;
-    }
-    .zap{
-      position:fixed;
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      left: 1090px;
-      bottom: 775px;
-      font-size:small;
-    }
-    .pacman{
-     position: absolute;
-   width: 33px;
-   
-    }
-    .animation-container {
-      width: 100%;
-      height: 300px;
-      position: absolute;
-      overflow: hidden;
-      bottom: 520px;
-      left: 0px;
-    }
-    
-    .animation-container img{
-      position: absolute;
-      left: -100px;
-      animation: move 12s linear infinite;
-    }
-    
-    @keyframes move {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(100% - -1135px));
-      }
-    }
-    /* Estilos gerais */
-/* Estilos gerais */
-.container {
-  
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 200px;
- 
-  border-radius: 5px;
-  
-}
-
 h1 {
   text-align: center;
   margin-bottom: 30px;
 }
 
-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-
-form textarea {
-  height: 150px;
-}
-
-form input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-nav li a {
-  display: block;
-  padding: 10px 20px;
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-}
-
-nav li a:hover {
-  background-color: #fff;
-  color: #FFA500;
-}
-
-nav .form {
-  display: flex;
-  align-items: center;
-}
-
-nav label {
-  margin-right: 10px;
-  color: #000000;
-}
 .logo{
-  width: 65px;
-  height: 60px;
+  width: 50px;
+        height: 60px;
+}
+.sociais
+{
+  display: flex;
+  flex-direction: column;
+}
+.sociaistodos{
+  display: flex;
+  flex-direction: column;
 }
 </style>
 
@@ -212,29 +76,78 @@ nav label {
     <section class="hero">
       <h1 id="text">Bem-vindo a Charsan Studios</h1>
       <p>Aqui é aonde fica nossas redes sociais para contato</p>
-      
- 
-<div class="ig1">ARAUJO</div>
-<div class="ig">SANTO</div>
-<div class="ig2">CHAVES</div>
-<div class="zap">WHATSAPP</div>
+          </section>
+  </main>
 
 
 
       </div>
+      <div class="sociaistodos">
+      <div class="sociaisnomes">
+<div>ARAUJO</div>
+<div>SANTO</div>
+<div>CHAVES</div>
+<div>WHATSAPP</div>
+</div>
+<div class="sociais"> 
      <a href="https://www.instagram.com/caio_samuel_oliveira/">
-      <img id="ig2" src="instagram.png" alt="insta">
+      <img id="ig2" src="instagram.png" alt="Logo do Instagram">
+      
     </a>
     <a href="https://www.instagram.com/wagnerreismourao/">
       <img id="ig1" src="instagram.png" alt="insta">
-    </a>
+      </a>
     <a href="https://www.instagram.com/jonata7julio/">
       <img id="ig" src="instagram.png" alt="insta">
-    </a> 
+      </a> 
     <a href="https://api.whatsapp.com/send/?phone=5521989551321&text&type=phone_number&app_absent=0">
       <img id="zap" src="whatsapp.png" alt="whatsapp">
+      
     </a>
-    </section>
-  </main>
+  </div>
+</div>
+   
+<footer class="top">
+  <div class="empresa">
+
+  <h1 class="nameempresa">CharsanStudios</h1>
+</div>
+  <div class="links">
+    <div>
+      <h2>Funcionarios</h2>
+      <a class="info">CAS Caio</a>
+      <a class="info">CAS Wagner</a> 
+      <a class="info">CAS Jônata</a>
+      <a class="info">Kadu</a>
+      <a class="info">Marcos</a>
+      <a class="info">Lohran</a>
+      <a class="info">Kayky</a>
+    </div>
+    <div>
+      <h2>Informações</h2>
+      <a class="info" href="index.html">Inicio do Site</a>
+      <a class="info"  href="sobre.html">Sobre Nós</a>
+      <a class="info"  href="ajudenos.html">Ajude Nós aqui</a>
+      <a class="info"  href="jogos.html">Jogos e Sites</a>
+      <a class="info"  href="tutoriais.html">Tutoriais</a>
+      <a class="info"  href="hchangelog.html">Atualizações</a>
+     
+    </div>
+  </div>
+</footer>
+<footer class="bottom">
+  <div class="legal">
+    <span>© 2023 All rights reserved</span>
+    <a>License</a> 
+    <a class="adm"  href="admins.html">Site administrativos</a>
+  </div>
+  <div class="links">
+    <a class="fa-brands fa-github"><img src="github (2).png" alt=""></a>
+    <a class="fa-brands fa-whatsapp"><img src="whatsapp.png" alt=""></a>
+    <a class="fa-brands fa-instagram"><img src="instagram.png" alt=""></a>
+    <a class="fa-brands fa-tiktok"><img src="tiktok (2).png" alt=""></a>
+  </div>
+</footer>
 </body>
+
 </html>

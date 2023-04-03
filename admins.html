@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COLOQUE A SENHA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body{
+            background:gray ;
+        }
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: inline-block;
+  }
+  
+  input[type=password] {
+    padding: 20px;
+    width: 260px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    font-size: xx-large;
+    background-color: #FF914D;
+    color: white;
+    outline: none;
+  }
+  input::placeholder{
+    color: white;
+  }
+  button {
+    background-color: #FF914D;
+    color: white;
+    padding: 30px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: xx-large;
+    margin: 20px;
+  }
+  
+  button:hover {
+    background-color: #a86033b0;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bem vindo ao site dos CAS
+        
+      </h1>
+      <form id="login-form" action="">
+        <input type="password" id="password-input" placeholder="Digite a senha">
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

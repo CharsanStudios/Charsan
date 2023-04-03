@@ -6,13 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="website icon" type="png" href="logosembg.png">
     <style>
-     body {
-     
-        display: flex;
+     .body {
+    display: flex;
         align-items: center;
         flex-direction: column;
-        height: 100vh;
-        padding: 40px;
+      
+        
       }
 
       h1 {
@@ -33,6 +32,7 @@
         font-size: 24px;
         padding: 16px 24px;
         margin-right: 8px;
+        outline: none;
       }
 
       button {
@@ -52,46 +52,10 @@
         color: #ffffff;
         text-shadow: 1px 1px #333333;
       }
-      header{
-        background-color: #fff;
-        background-size: 100%;
-      }
-      nav{
-background-size: 100%;
-background-color: #fff;
-margin-bottom: 10px;
-}
-nav ul {
-list-style: none;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 20px;
-}
-nav li a {
-display: block;
-padding: 10px 150px;
-color: #000000;
-text-decoration: none;
-text-transform: uppercase;
-transition: background-color 0.3s ease;
-}
-nav li a:hover {
-background-color: #fff;
-color: #FFA500;
-}
 .logo{
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 60px;
 }
-    
-body {
-    background-image:url(back.jpg) ;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
     </style>
     <script>
       var min = 1;
@@ -147,12 +111,54 @@ body {
         </ul>
       </nav>
     </header>
+    <div class="body">
     <h1>Jogo de Adivinhação Complexo</h1>
     <button onclick="generateSecretNumber()">Começar</button>
     <br><br>
     <p>Tentativas Restantes: <span id="remaining">10</span></p>
     <br>
     <input type="text" id="guess" placeholder="Digite um número">
-    <button id="submit" onclick="makeGuess()">Enviar</button>
+    <button id="submit" onclick="makeGuess()">Enviar</button></div>
+    <footer class="top">
+      <div class="empresa">
+    
+      <h1 class="nameempresa">CharsanStudios</h1>
+    </div>
+      <div class="links">
+        <div>
+          <h2>Funcionarios</h2>
+          <a class="info">CAS Caio</a>
+          <a class="info">CAS Wagner</a> 
+          <a class="info">CAS Jônata</a>
+          <a class="info">Kadu</a>
+          <a class="info">Marcos</a>
+          <a class="info">Lohran</a>
+          <a class="info">Kayky</a>
+        </div>
+        <div>
+          <h2>Informações</h2>
+          <a class="info" href="index.html">Inicio do Site</a>
+          <a class="info"  href="sobre.html">Sobre Nós</a>
+          <a class="info"  href="ajudenos.html">Ajude Nós aqui</a>
+          <a class="info"  href="jogos.html">Jogos e Sites</a>
+          <a class="info"  href="tutoriais.html">Tutoriais</a>
+          <a class="info"  href="hchangelog.html">Atualizações</a>
+         
+        </div>
+      </div>
+    </footer>
+    <footer class="bottom">
+      <div class="legal">
+        <span>© 2023 All rights reserved</span>
+        <a>License</a> 
+        <a class="adm"  href="admins.html">Site administrativos</a>
+      </div>
+      <div class="links">
+        <a class="fa-brands fa-github"><img src="github (2).png" alt=""></a>
+        <a href="https://api.whatsapp.com/send/?phone=5521989551321&text&type=phone_number&app_absent=0" class="fa-brands fa-whatsapp"><img src="whatsapp.png" alt=""></a>
+        <a class="fa-brands fa-instagram"><img src="instagram.png" alt=""></a>
+        <a class="fa-brands fa-tiktok"><img src="tiktok (2).png" alt=""></a>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,17 @@
+Aprendendo JavaScript:
+
+-30/03/2023-
+Professor Gustavo Guanabara / CursoEmVideo
+
+Necessarios:
+Navegador ( Google Chrome , Opera GX)
+Editor de Codigos ( Visual Studio Code )
+Node.js
+
+IMPORTANTES:
+var ( variavel = identificação )
+let , const = var
++ var + ou ${var} ( Para chamar uma var )
+Number( window.alert(' saldo= 10'))( Para fazer adição )
+
+
